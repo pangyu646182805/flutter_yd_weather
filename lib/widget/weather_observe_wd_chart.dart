@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_yd_weather/utils/log.dart';
 import 'package:flutter_yd_weather/widget/load_asset_image.dart';
 
 import '../res/colours.dart';
