@@ -154,7 +154,7 @@ class _WeatherObserveUvPainter extends BoxPainter {
         position,
         7.w,
         _circlePaint
-          ..color = color.withOpacity(0)
+          ..color = color.withValues(alpha: 0)
           ..blendMode = BlendMode.clear,
       );
       canvas.drawCircle(

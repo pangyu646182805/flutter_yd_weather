@@ -155,7 +155,7 @@ class _WeatherObserveWdPainter extends BoxPainter {
           Offset(rect.width * 0.5 - length, 0),
           Offset(rect.width * 0.5, 0),
           _paint
-            ..color = Colours.white.withOpacity(
+            ..color = Colours.white.withValues(alpha: 
                 (i == 0 || i == 18 || i == 36 || i == 54) ? 1 : 0.4));
       canvas.rotate(2 * pi / 72);
     }

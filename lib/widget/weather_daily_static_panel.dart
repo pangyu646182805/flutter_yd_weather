@@ -106,7 +106,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
               top: Constants.itemStickyHeight.w,
             ),
             color: (isDark ? Colours.white : Colours.black)
-                .withOpacity(panelOpacity),
+                .withValues(alpha: panelOpacity),
             borderRadius: BorderRadius.circular(12.w),
             useBlurry: false,
             child: Stack(
@@ -121,7 +121,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
                       Container(
                         width: double.infinity,
                         height: 0.5.w,
-                        color: Colours.white.withOpacity(0.2),
+                        color: Colours.white.withValues(alpha: 0.2),
                       ),
                       Expanded(
                         child: Stack(
@@ -231,7 +231,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
                                             style: TextStyle(
                                               fontSize: 11.sp,
                                               color: Colours.white
-                                                  .withOpacity(0.6),
+                                                  .withValues(alpha: 0.6),
                                               height: 1,
                                             ),
                                           ),
@@ -246,7 +246,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
                                               width: 10.w,
                                               height: 10.w,
                                               color: Colours.white
-                                                  .withOpacity(0.6),
+                                                  .withValues(alpha: 0.6),
                                             ),
                                           ),
                                         ],
@@ -277,7 +277,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
                   "15日天气预报",
                   style: TextStyle(
                     fontSize: 12.sp,
-                    color: Colours.white.withOpacity(0.6),
+                    color: Colours.white.withValues(alpha: 0.6),
                   ),
                 ),
                 Visibility(
@@ -294,7 +294,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
                             "曲线",
                             style: TextStyle(
                               fontSize: 11.sp,
-                              color: Colours.white.withOpacity(
+                              color: Colours.white.withValues(alpha: 
                                   currentDailyWeatherType ==
                                           Constants.lineChartDailyWeather
                                       ? 1
@@ -306,7 +306,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
                       Container(
                         width: 1.w,
                         height: 12.w,
-                        color: Colours.white.withOpacity(0.6),
+                        color: Colours.white.withValues(alpha: 0.6),
                       ),
                       OpacityLayout(
                         onPressed: changeListDailyWeather,
@@ -319,7 +319,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
                             "列表",
                             style: TextStyle(
                               fontSize: 11.sp,
-                              color: Colours.white.withOpacity(
+                              color: Colours.white.withValues(alpha: 
                                   currentDailyWeatherType ==
                                           Constants.listDailyWeather
                                       ? 1
@@ -436,7 +436,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
                       (item?.low ?? 0).getTemp(),
                       style: TextStyle(
                         fontSize: 18.sp,
-                        color: Colours.white.withOpacity(isBefore ? 1 : 0.5),
+                        color: Colours.white.withValues(alpha: isBefore ? 1 : 0.5),
                         height: 1,
                       ),
                     ),
@@ -469,7 +469,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
             Container(
               width: double.infinity,
               height: 0.5.w,
-              color: Colours.white.withOpacity(0.2),
+              color: Colours.white.withValues(alpha: 0.2),
             ),
           ],
         ),
@@ -500,7 +500,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
             weatherDateTime,
             style: TextStyle(
               fontSize: 14.sp,
-              color: isBefore ? Colours.white.withOpacity(0.5) : Colours.white,
+              color: isBefore ? Colours.white.withValues(alpha: 0.5) : Colours.white,
               height: 1,
             ),
           ),
@@ -509,7 +509,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
             DateUtil.formatDateStr(date, format: Constants.mmdd),
             style: TextStyle(
               fontSize: 12.sp,
-              color: isBefore ? Colours.white.withOpacity(0.5) : Colours.white,
+              color: isBefore ? Colours.white.withValues(alpha: 0.5) : Colours.white,
               height: 1,
             ),
           ),
@@ -518,7 +518,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
             item?.day?.wthr ?? "",
             style: TextStyle(
               fontSize: 14.sp,
-              color: isBefore ? Colours.white.withOpacity(0.5) : Colours.white,
+              color: isBefore ? Colours.white.withValues(alpha: 0.5) : Colours.white,
               height: 1,
             ),
           ),
@@ -563,7 +563,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
             item?.night?.wthr ?? "",
             style: TextStyle(
               fontSize: 14.sp,
-              color: isBefore ? Colours.white.withOpacity(0.5) : Colours.white,
+              color: isBefore ? Colours.white.withValues(alpha: 0.5) : Colours.white,
               height: 1,
             ),
           ),
@@ -572,7 +572,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
             item?.wd ?? "",
             style: TextStyle(
               fontSize: 14.sp,
-              color: isBefore ? Colours.white.withOpacity(0.5) : Colours.white,
+              color: isBefore ? Colours.white.withValues(alpha: 0.5) : Colours.white,
               height: 1,
             ),
           ),
@@ -581,7 +581,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
             item?.wp ?? "",
             style: TextStyle(
               fontSize: 14.sp,
-              color: isBefore ? Colours.white.withOpacity(0.5) : Colours.white,
+              color: isBefore ? Colours.white.withValues(alpha: 0.5) : Colours.white,
               height: 1,
             ),
           ),
@@ -595,7 +595,7 @@ class WeatherDailyStaticPanel extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 2.w),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.w),
-                color: item?.aqi.getAqiColor().withOpacity(0.48),
+                color: item?.aqi.getAqiColor().withValues(alpha: 0.48),
               ),
               child: Text(
                 item?.aqiLevelName ?? "",

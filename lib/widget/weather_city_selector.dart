@@ -121,7 +121,7 @@ class WeatherCitySelectorState extends State<WeatherCitySelector>
             width: double.infinity,
             height: double.infinity,
             color: ColorUtils.adjustAlpha(
-                Colours.black.withOpacity(0.15), animValue),
+                Colours.black.withValues(alpha: 0.15), animValue),
             blur: 25 * animValue,
             borderRadius: BorderRadius.zero,
             child: Stack(
@@ -182,10 +182,10 @@ class WeatherCitySelectorState extends State<WeatherCitySelector>
                         margin: EdgeInsets.only(bottom: 42.w),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100.w),
-                          color: Colours.black.withOpacity(0.2),
+                          color: Colours.black.withValues(alpha: 0.2),
                           border: Border.all(
                             width: 0.5.w,
-                            color: Colours.white.withOpacity(0.5),
+                            color: Colours.white.withValues(alpha: 0.5),
                           ),
                         ),
                         child: Text(

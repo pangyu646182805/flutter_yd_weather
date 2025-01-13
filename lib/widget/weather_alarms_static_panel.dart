@@ -64,7 +64,7 @@ class WeatherAlarmsStaticPanel extends StatelessWidget {
               padding: EdgeInsets.only(
                 top: min(shrinkOffset, Constants.itemStickyHeight.w),
               ),
-              color: (isDark ? Colours.white : Colours.black).withOpacity(panelOpacity),
+              color: (isDark ? Colours.white : Colours.black).withValues(alpha: panelOpacity),
               borderRadius: BorderRadius.circular(12.w),
               useBlurry: false,
               child: Stack(
@@ -177,7 +177,7 @@ class WeatherAlarmsStaticPanel extends StatelessWidget {
                             dotWidth: 6.w,
                             dotHeight: 2.w,
                             activeDotColor: Colours.white,
-                            dotColor: Colours.white.withOpacity(0.5),
+                            dotColor: Colours.white.withValues(alpha: 0.5),
                           ),
                         ),
                       ),
@@ -198,7 +198,7 @@ class WeatherAlarmsStaticPanel extends StatelessWidget {
                   "极端天气",
                   style: TextStyle(
                     fontSize: 12.sp,
-                    color: Colours.white.withOpacity(0.6),
+                    color: Colours.white.withValues(alpha: 0.6),
                   ),
                 ),
               ),

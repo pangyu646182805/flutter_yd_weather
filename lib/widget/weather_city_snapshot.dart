@@ -154,8 +154,8 @@ class WeatherCitySnapshot extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Colours.black.withOpacity(0.2),
-                  Colours.black.withOpacity(0.1),
+                  Colours.black.withValues(alpha: 0.2),
+                  Colours.black.withValues(alpha: 0.1),
                 ],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,

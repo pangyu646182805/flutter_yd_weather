@@ -95,7 +95,7 @@ class AirQualityDetailPopupState extends State<AirQualityDetailPopup> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12.w),
                 color: (widget.isDark ? Colours.white : Colours.black)
-                    .withOpacity(widget.panelOpacity),
+                    .withValues(alpha: widget.panelOpacity),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -191,7 +191,7 @@ class AirQualityDetailPopupState extends State<AirQualityDetailPopup> {
       alignment: Alignment.center,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.w),
-        color: (widget.isDark ? Colours.white : Colours.black).withOpacity(widget.panelOpacity),
+        color: (widget.isDark ? Colours.white : Colours.black).withValues(alpha: widget.panelOpacity),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -228,7 +228,7 @@ class AirQualityDetailPopupState extends State<AirQualityDetailPopup> {
                 "ug/m³",
                 style: TextStyle(
                   fontSize: 12.sp,
-                  color: Colours.white.withOpacity(0.6),
+                  color: Colours.white.withValues(alpha: 0.6),
                   height: 1,
                 ),
               ),

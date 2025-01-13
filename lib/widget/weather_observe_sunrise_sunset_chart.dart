@@ -58,7 +58,7 @@ class _WeatherObserveSunriseSunsetPainter extends BoxPainter {
     ..strokeCap = StrokeCap.round
     ..style = PaintingStyle.stroke;
   final _linePaint = Paint()
-    ..color = Colours.white.withOpacity(0.4)
+    ..color = Colours.white.withValues(alpha: 0.4)
     ..isAntiAlias = true
     ..strokeWidth = 0.5.w
     ..strokeCap = StrokeCap.round
@@ -101,11 +101,11 @@ class _WeatherObserveSunriseSunsetPainter extends BoxPainter {
           Offset(newRect.right, position.dy), _linePaint);
     }
     canvas.drawPath(
-        extractPath1, _paint..color = Colours.white.withOpacity(0.4));
+        extractPath1, _paint..color = Colours.white.withValues(alpha: 0.4));
     canvas.drawPath(extractPath2, _paint..color = Colours.white);
     canvas.drawPath(extractPath3, _paint..color = Colours.white);
     canvas.drawPath(
-        extractPath4, _paint..color = Colours.white.withOpacity(0.4));
+        extractPath4, _paint..color = Colours.white.withValues(alpha: 0.4));
     final currentMill = DateTime.now().millisecondsSinceEpoch;
     final sunriseDateTime = "${_weatherObserveSunriseSunsetChart.date}${_weatherObserveSunriseSunsetChart.sunrise}".replaceAll(":", "").getDartDateTimeFormattedString();
     final sunsetDateTime = "${_weatherObserveSunriseSunsetChart.date}${_weatherObserveSunriseSunsetChart.sunset}".replaceAll(":", "").getDartDateTimeFormattedString();
@@ -130,14 +130,14 @@ class _WeatherObserveSunriseSunsetPainter extends BoxPainter {
         position,
         7.w,
         _circlePaint
-          ..color = Colours.white.withOpacity(0)
+          ..color = Colours.white.withValues(alpha: 0)
           ..blendMode = BlendMode.clear,
       );
       canvas.drawCircle(
         position,
         4.w,
         _circlePaint
-          ..color = Colours.white.withOpacity(percent < 0.2 || percent > 0.8 ? 0.4 : 1)
+          ..color = Colours.white.withValues(alpha: percent < 0.2 || percent > 0.8 ? 0.4 : 1)
           ..blendMode = BlendMode.srcOver,
       );
     }

@@ -58,7 +58,7 @@ class WeatherHourStaticPanel extends StatelessWidget {
               top: Constants.itemStickyHeight.w,
             ),
             color: (isDark ? Colours.white : Colours.black)
-                .withOpacity(panelOpacity),
+                .withValues(alpha: panelOpacity),
             borderRadius: BorderRadius.circular(12.w),
             useBlurry: false,
             child: Stack(
@@ -73,7 +73,7 @@ class WeatherHourStaticPanel extends StatelessWidget {
                       Container(
                         width: double.infinity,
                         height: 0.5.w,
-                        color: Colours.white.withOpacity(0.2),
+                        color: Colours.white.withValues(alpha: 0.2),
                       ),
                       Expanded(
                         child: ListView.separated(
@@ -171,7 +171,7 @@ class WeatherHourStaticPanel extends StatelessWidget {
               "每小时天气预报",
               style: TextStyle(
                 fontSize: 12.sp,
-                color: Colours.white.withOpacity(0.6),
+                color: Colours.white.withValues(alpha: 0.6),
               ),
             ),
           ),

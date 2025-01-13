@@ -124,7 +124,7 @@ class _WeatherObservePressurePainter extends BoxPainter {
       Offset(rect.width * 0.5 - 2.w, 0),
       Offset(rect.width * 0.5 - 2.w, 0),
       _pressurePaint
-        ..color = Colours.white.withOpacity(0)
+        ..color = Colours.white.withValues(alpha: 0)
         ..strokeWidth = 6.w
         ..strokeCap = StrokeCap.square
         ..blendMode = BlendMode.clear,

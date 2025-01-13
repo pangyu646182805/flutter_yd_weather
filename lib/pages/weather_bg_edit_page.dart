@@ -115,7 +115,7 @@ class _WeatherBgEditPageState extends State<WeatherBgEditPage>
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(16.w),
-                          color: context.black.withOpacity(
+                          color: context.black.withValues(alpha: 
                             _isNight ? 0 : 0.25,
                           ),
                         ),
@@ -138,7 +138,7 @@ class _WeatherBgEditPageState extends State<WeatherBgEditPage>
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(16.w),
-                          color: context.black.withOpacity(
+                          color: context.black.withValues(alpha: 
                             _isNight ? 0.25 : 0,
                           ),
                         ),

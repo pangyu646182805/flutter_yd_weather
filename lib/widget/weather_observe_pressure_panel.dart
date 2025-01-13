@@ -45,7 +45,7 @@ class WeatherObservePressurePanel extends StatelessWidget {
               width: double.infinity,
               height: double.infinity,
               blur: 5,
-              color: (isDark ? Colours.white : Colours.black).withOpacity(panelOpacity),
+              color: (isDark ? Colours.white : Colours.black).withValues(alpha: panelOpacity),
               borderRadius: BorderRadius.circular(12.w),
               padding: EdgeInsets.only(
                 top: Constants.itemStickyHeight.w,
@@ -101,7 +101,7 @@ class WeatherObservePressurePanel extends StatelessWidget {
                 "气压",
                 style: TextStyle(
                   fontSize: 12.sp,
-                  color: Colours.white.withOpacity(0.6),
+                  color: Colours.white.withValues(alpha: 0.6),
                 ),
               ),
             ),

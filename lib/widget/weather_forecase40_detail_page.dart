@@ -238,7 +238,7 @@ class WeatherForecase40DetailPageState
                               color: (widget.isDark
                                       ? Colours.white
                                       : Colours.black)
-                                  .withOpacity(widget.panelOpacity),
+                                  .withValues(alpha: widget.panelOpacity),
                             ),
                             child: AnimatedOpacity(
                               opacity: _opacity2,
@@ -384,7 +384,7 @@ class WeatherForecase40DetailPageState
                                                 ? (widget.isDark
                                                         ? Colours.black
                                                         : Colours.white)
-                                                    .withOpacity(widget.panelOpacity)
+                                                    .withValues(alpha: widget.panelOpacity)
                                                 : null,
                                           ),
                                         ),
@@ -403,7 +403,7 @@ class WeatherForecase40DetailPageState
                                                 style: TextStyle(
                                                   fontSize: 15.w,
                                                   color: Colours.white
-                                                      .withOpacity(
+                                                      .withValues(alpha: 
                                                           isEnabled ? 1 : 0.6),
                                                   height: 1,
                                                   fontWeight: isToday
@@ -487,7 +487,7 @@ class WeatherForecase40DetailPageState
                           dotWidth: 6.w,
                           dotHeight: 2.w,
                           activeDotColor: Colours.white,
-                          dotColor: Colours.white.withOpacity(0.5),
+                          dotColor: Colours.white.withValues(alpha: 0.5),
                         ),
                       ),
                     ),
@@ -499,7 +499,7 @@ class WeatherForecase40DetailPageState
             Container(
               width: double.infinity,
               height: 0.5.w,
-              color: Colours.white.withOpacity(0.2),
+              color: Colours.white.withValues(alpha: 0.2),
             ),
             Gaps.generateGap(height: 6.w),
             Expanded(
@@ -555,7 +555,7 @@ class WeatherForecase40DetailPageState
                                     borderRadius: BorderRadius.circular(8.w),
                                     color: _currentSelectedItem?.aqi
                                         .getAqiColor()
-                                        .withOpacity(0.48),
+                                        .withValues(alpha: 0.48),
                                   ),
                                   child: Text(
                                     _currentSelectedItem?.aqiLevelName ?? "",
@@ -627,7 +627,7 @@ class WeatherForecase40DetailPageState
       height: 288.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.w),
-        color: (widget.isDark ? Colours.white : Colours.black).withOpacity(widget.panelOpacity),
+        color: (widget.isDark ? Colours.white : Colours.black).withValues(alpha: widget.panelOpacity),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -663,7 +663,7 @@ class WeatherForecase40DetailPageState
                     text: "天降温",
                     style: TextStyle(
                       fontSize: 13.sp,
-                      color: Colours.white.withOpacity(0.6),
+                      color: Colours.white.withValues(alpha: 0.6),
                       height: 1,
                       fontFamily: "RobotoLight",
                     ),
@@ -683,7 +683,7 @@ class WeatherForecase40DetailPageState
                     text: "天升温",
                     style: TextStyle(
                       fontSize: 13.sp,
-                      color: Colours.white.withOpacity(0.6),
+                      color: Colours.white.withValues(alpha: 0.6),
                       height: 1,
                       fontFamily: "RobotoLight",
                     ),
@@ -703,7 +703,7 @@ class WeatherForecase40DetailPageState
                     text: "天有降水",
                     style: TextStyle(
                       fontSize: 13.sp,
-                      color: Colours.white.withOpacity(0.6),
+                      color: Colours.white.withValues(alpha: 0.6),
                       height: 1,
                       fontFamily: "RobotoLight",
                     ),

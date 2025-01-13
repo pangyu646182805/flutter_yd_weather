@@ -58,7 +58,7 @@ class WeatherAirQualityStaticPanel extends StatelessWidget {
               padding: EdgeInsets.only(
                 top: min(shrinkOffset, Constants.itemStickyHeight.w),
               ),
-              color: (isDark ? Colours.white : Colours.black).withOpacity(panelOpacity),
+              color: (isDark ? Colours.white : Colours.black).withValues(alpha: panelOpacity),
               borderRadius: BorderRadius.circular(12.w),
               useBlurry: false,
               child: Stack(
@@ -148,7 +148,7 @@ class WeatherAirQualityStaticPanel extends StatelessWidget {
                   "空气质量",
                   style: TextStyle(
                     fontSize: 12.sp,
-                    color: Colours.white.withOpacity(0.6),
+                    color: Colours.white.withValues(alpha: 0.6),
                   ),
                 ),
               ),

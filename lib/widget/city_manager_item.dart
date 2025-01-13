@@ -141,8 +141,8 @@ class CityManagerItemState extends State<CityManagerItem>
                       borderRadius: BorderRadius.circular(16.w),
                       gradient: LinearGradient(
                         colors: [
-                          Colours.black.withOpacity(0.2),
-                          Colours.black.withOpacity(0.1),
+                          Colours.black.withValues(alpha: 0.2),
+                          Colours.black.withValues(alpha: 0.1),
                         ],
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,

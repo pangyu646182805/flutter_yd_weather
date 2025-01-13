@@ -341,7 +341,7 @@ class _WeatherForecase40Painter extends BoxPainter {
         Offset(circleRect.center.dx, newRect.top),
         _linePaint
           ..color =
-              isSelected ? Colours.color0DA8FF : Colours.white.withOpacity(0.4)
+              isSelected ? Colours.color0DA8FF : Colours.white.withValues(alpha: 0.4)
           ..strokeWidth = isSelected ? 2.w : 0.5.w,
       );
       canvas.drawPath(
@@ -376,7 +376,7 @@ class _WeatherForecase40Painter extends BoxPainter {
       _path,
       [
         BoxShadow(
-          color: Colours.color0DA8FF.withOpacity(0.4),
+          color: Colours.color0DA8FF.withValues(alpha: 0.4),
           blurRadius: 4.w,
         ),
       ],
@@ -397,7 +397,7 @@ class _WeatherForecase40Painter extends BoxPainter {
           Offset(startX, lineY),
           Offset(endX, lineY),
           _linePaint
-            ..color = Colours.white.withOpacity(0.8)
+            ..color = Colours.white.withValues(alpha: 0.8)
             ..strokeWidth = 0.8.w);
       startX += dashWidth + spaceWidth;
     }

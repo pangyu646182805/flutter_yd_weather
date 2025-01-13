@@ -79,7 +79,7 @@ class WeatherTempLineBar extends StatelessWidget {
           height: height,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(100.w),
-            color: Colours.black.withOpacity(0.05),
+            color: Colours.black.withValues(alpha: 0.05),
           ),
           child: ClipPath(
             clipper: WeatherTempLineBarClipper(

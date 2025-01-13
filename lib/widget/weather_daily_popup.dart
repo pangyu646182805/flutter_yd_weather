@@ -69,7 +69,7 @@ class WeatherDailyPopupState extends State<WeatherDailyPopup> {
                 width: double.infinity,
                 height: double.infinity,
                 color: (widget.isDark ? Colours.white : Colours.black)
-                    .withOpacity(widget.panelOpacity),
+                    .withValues(alpha: widget.panelOpacity),
                 child: SingleChildScrollView(
                   physics: const NeverScrollableScrollPhysics(),
                   child: Column(
@@ -102,7 +102,7 @@ class WeatherDailyPopupState extends State<WeatherDailyPopup> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8.w),
                                 color:
-                                    item?.aqi.getAqiColor().withOpacity(0.48),
+                                    item?.aqi.getAqiColor().withValues(alpha: 0.48),
                               ),
                               child: Text(
                                 item?.aqiLevelName ?? "",
@@ -183,7 +183,7 @@ class WeatherDailyPopupState extends State<WeatherDailyPopup> {
               isDark ? item?.night?.wthr ?? "" : item?.day?.wthr ?? "",
               style: TextStyle(
                 fontSize: 14.sp,
-                color: Colours.white.withOpacity(0.6),
+                color: Colours.white.withValues(alpha: 0.6),
                 height: 1,
               ),
             ),
@@ -192,7 +192,7 @@ class WeatherDailyPopupState extends State<WeatherDailyPopup> {
               isDark ? (item?.low ?? 0).getTemp() : (item?.high ?? 0).getTemp(),
               style: TextStyle(
                 fontSize: 14.sp,
-                color: Colours.white.withOpacity(0.6),
+                color: Colours.white.withValues(alpha: 0.6),
                 height: 1,
               ),
             ),
@@ -203,7 +203,7 @@ class WeatherDailyPopupState extends State<WeatherDailyPopup> {
           "${item?.wd ?? ""}${item?.wp ?? ""}",
           style: TextStyle(
             fontSize: 14.sp,
-            color: Colours.white.withOpacity(0.6),
+            color: Colours.white.withValues(alpha: 0.6),
             height: 1,
           ),
         ),
@@ -211,7 +211,7 @@ class WeatherDailyPopupState extends State<WeatherDailyPopup> {
         Container(
           width: 24.w,
           height: 0.5.w,
-          color: Colours.white.withOpacity(0.6),
+          color: Colours.white.withValues(alpha: 0.6),
         ),
         Gaps.generateGap(height: 12.w),
         Text(

@@ -393,7 +393,7 @@ class _WeatherBgListPageState extends State<WeatherBgListPage> {
               borderRadius: BorderRadius.circular(16.w),
               border: Border.all(
                 width: 2.w,
-                color: context.black.withOpacity(0.2),
+                color: context.black.withValues(alpha: 0.2),
               ),
             ),
           ),
@@ -404,7 +404,7 @@ class _WeatherBgListPageState extends State<WeatherBgListPage> {
               height: 32.w,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16.w),
-                color: context.black.withOpacity(0.2),
+                color: context.black.withValues(alpha: 0.2),
               ),
             ),
           ),
@@ -415,7 +415,7 @@ class _WeatherBgListPageState extends State<WeatherBgListPage> {
               height: 2.w,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16.w),
-                color: context.black.withOpacity(0.2),
+                color: context.black.withValues(alpha: 0.2),
               ),
             ),
           ),

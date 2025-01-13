@@ -101,7 +101,7 @@ class WeatherObserveForecase40Panel extends StatelessWidget {
                 height: double.infinity,
                 blur: 5,
                 color: (isDark ? Colours.white : Colours.black)
-                    .withOpacity(panelOpacity),
+                    .withValues(alpha: panelOpacity),
                 borderRadius: BorderRadius.circular(12.w),
                 padding: EdgeInsets.only(
                   top: Constants.itemStickyHeight.w,
@@ -124,7 +124,7 @@ class WeatherObserveForecase40Panel extends StatelessWidget {
                               "温度趋势",
                               style: TextStyle(
                                 fontSize: 12.sp,
-                                color: Colours.white.withOpacity(0.6),
+                                color: Colours.white.withValues(alpha: 0.6),
                                 height: 1,
                               ),
                             ),
@@ -142,7 +142,7 @@ class WeatherObserveForecase40Panel extends StatelessWidget {
                               "降水趋势",
                               style: TextStyle(
                                 fontSize: 12.sp,
-                                color: Colours.white.withOpacity(0.6),
+                                color: Colours.white.withValues(alpha: 0.6),
                                 height: 1,
                               ),
                             ),
@@ -175,7 +175,7 @@ class WeatherObserveForecase40Panel extends StatelessWidget {
                   "未来40日天气",
                   style: TextStyle(
                     fontSize: 12.sp,
-                    color: Colours.white.withOpacity(0.6),
+                    color: Colours.white.withValues(alpha: 0.6),
                   ),
                 ),
               ),

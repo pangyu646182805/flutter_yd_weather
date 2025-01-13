@@ -82,7 +82,7 @@ class WeatherHeaderStaticPanel extends StatelessWidget {
                               width: 16.w,
                               height: 16.w,
                               color: (isDark ? Colours.white : Colours.black)
-                                  .withOpacity(0.6),
+                                  .withValues(alpha: 0.6),
                             ),
                             Gaps.generateGap(width: 4.w),
                             Text(
@@ -90,7 +90,7 @@ class WeatherHeaderStaticPanel extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 12.sp,
                                 color: (isDark ? Colours.white : Colours.black)
-                                    .withOpacity(0.6),
+                                    .withValues(alpha: 0.6),
                               ),
                             ),
                           ],

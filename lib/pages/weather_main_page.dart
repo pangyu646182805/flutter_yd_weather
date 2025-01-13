@@ -189,8 +189,8 @@ class _WeatherMainPageState
                               decoration: BoxDecoration(
                                 gradient: LinearGradient(
                                   colors: [
-                                    Colours.black.withOpacity(0.2),
-                                    Colours.black.withOpacity(0.1),
+                                    Colours.black.withValues(alpha: 0.2),
+                                    Colours.black.withValues(alpha: 0.1),
                                   ],
                                   begin: Alignment.topCenter,
                                   end: Alignment.bottomCenter,
@@ -205,7 +205,7 @@ class _WeatherMainPageState
                                     weatherMainClipper: clipper,
                                     borderWidth: 1.w * animValue,
                                     borderColor:
-                                        context.black.withOpacity(animValue),
+                                        context.black.withValues(alpha: animValue),
                                   )
                                 : null,
                             child: super.build(context),
@@ -620,7 +620,7 @@ class _WeatherMainPageState
                     style: TextStyle(
                       fontSize: 12.sp,
                       color: (isDark ? Colours.white : Colours.black)
-                          .withOpacity(0.4),
+                          .withValues(alpha: 0.4),
                       height: 1,
                     ),
                   ),
@@ -634,7 +634,7 @@ class _WeatherMainPageState
                         border: Border.all(
                           width: 0.5.w,
                           color: (isDark ? Colours.white : Colours.black)
-                              .withOpacity(0.5),
+                              .withValues(alpha: 0.5),
                         ),
                       ),
                       child: Row(
@@ -645,7 +645,7 @@ class _WeatherMainPageState
                             width: 18.w,
                             height: 18.w,
                             color: (isDark ? Colours.white : Colours.black)
-                                .withOpacity(0.5),
+                                .withValues(alpha: 0.5),
                           ),
                           Gaps.generateGap(width: 4.w),
                           Text(
@@ -653,7 +653,7 @@ class _WeatherMainPageState
                             style: TextStyle(
                               fontSize: 15.sp,
                               color: (isDark ? Colours.white : Colours.black)
-                                  .withOpacity(0.5),
+                                  .withValues(alpha: 0.5),
                               height: 1,
                             ),
                           ),

@@ -110,7 +110,7 @@ class WeatherAlarmsDetailPopupState extends State<WeatherAlarmsDetailPopup> {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12.w),
             color: (widget.isDark ? Colours.white : Colours.black)
-                .withOpacity(widget.panelOpacity),
+                .withValues(alpha: widget.panelOpacity),
           ),
           child: Stack(
             children: [
@@ -210,7 +210,7 @@ class WeatherAlarmsDetailPopupState extends State<WeatherAlarmsDetailPopup> {
                         dotWidth: 6.w,
                         dotHeight: 2.w,
                         activeDotColor: Colours.white,
-                        dotColor: Colours.white.withOpacity(0.5),
+                        dotColor: Colours.white.withValues(alpha: 0.5),
                       ),
                     ),
                   ),

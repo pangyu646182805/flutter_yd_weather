@@ -101,18 +101,18 @@ class _WeatherDailyTempPanelPainter extends BoxPainter {
       );
       canvas.drawPath(
         _path,
-        _linePaint..color = Colours.white.withOpacity(0.3),
+        _linePaint..color = Colours.white.withValues(alpha: 0.3),
       );
       canvas.drawCircle(
         Offset(rect.center.dx, tempYAxis),
         2.5.w,
-        _circlePaint..color = Colours.white.withOpacity(0.3),
+        _circlePaint..color = Colours.white.withValues(alpha: 0.3),
       );
       _drawTemp(
         canvas,
         rect,
         (isHigh ? data.high : data.low).getTemp(),
-        Colours.white.withOpacity(0.3),
+        Colours.white.withValues(alpha: 0.3),
         tempYAxis,
         isHigh: isHigh,
       );
@@ -154,25 +154,25 @@ class _WeatherDailyTempPanelPainter extends BoxPainter {
             extractPath1,
             _linePaint
               ..color = isToday || isBefore
-                  ? Colours.white.withOpacity(0.3)
+                  ? Colours.white.withValues(alpha: 0.3)
                   : Colours.white);
         canvas.drawPath(
             extractPath2,
             _linePaint
               ..color =
-                  isBefore ? Colours.white.withOpacity(0.3) : Colours.white);
+                  isBefore ? Colours.white.withValues(alpha: 0.3) : Colours.white);
       }
       canvas.drawCircle(
           Offset(rect.center.dx, (p2.y - p1.y) / 2 + p1.y),
           2.5.w,
           _circlePaint
             ..color =
-                isBefore ? Colours.white.withOpacity(0.3) : Colours.white);
+                isBefore ? Colours.white.withValues(alpha: 0.3) : Colours.white);
       _drawTemp(
         canvas,
         rect,
         (isHigh ? data.high : data.low).getTemp(),
-        isBefore ? Colours.white.withOpacity(0.3) : Colours.white,
+        isBefore ? Colours.white.withValues(alpha: 0.3) : Colours.white,
         (p2.y - p1.y) / 2 + p1.y,
         isHigh: isHigh,
       );

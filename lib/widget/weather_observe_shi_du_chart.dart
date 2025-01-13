@@ -100,7 +100,7 @@ class _WeatherObserveShiDuPainter extends BoxPainter {
       pi * 1.5,
       false,
     );
-    canvas.drawPath(_path, _paint..color = Colours.white.withOpacity(0.4));
+    canvas.drawPath(_path, _paint..color = Colours.white.withValues(alpha: 0.4));
     _path.reset();
     final shiDuValue = _weatherObserveShiDuChart.shiDu.getShiDuValue();
     final shiDuPercent = (shiDuValue / 100).fixPercent();
